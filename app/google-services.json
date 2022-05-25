@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "325513118105",
+    "project_id": "touristcompany-de575",
+    "storage_bucket": "touristcompany-de575.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:325513118105:android:ce20e802704adcbd325308",
+        "android_client_info": {
+          "package_name": "com.soul.touristcompany"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "325513118105-fluorm8col13a57tj2uaf0ed4iqsnmr6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.soul.touristcompany",
+            "certificate_hash": "6e9408278da7373aa8465511a530a2b355cc9679"
+          }
+        },
+        {
+          "client_id": "325513118105-i39e9dqpdmnc8alfliv975thha3gib9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzWrofQI1fm-k7IVWIMpawrGyNfsxJyn0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "325513118105-i39e9dqpdmnc8alfliv975thha3gib9q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
