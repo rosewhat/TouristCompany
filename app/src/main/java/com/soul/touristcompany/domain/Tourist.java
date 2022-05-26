@@ -14,6 +14,9 @@ public class Tourist {
         this.description = description;
     }
 
+    public Tourist() {
+    }
+
     public int getImages() {
         return images;
     }

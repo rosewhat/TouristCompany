@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private ImageView imageView;
-    private ArrayList<Tourist> tourists = new ArrayList<>();
+    private ArrayList<Tourist> tourists;
     private TouristAdapter adapter;
     private ImageView imageViewLike;
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Курсовая работа ИКБО-25-20", Toast.LENGTH_SHORT).show();
             }
         });
-
+        tourists = new ArrayList<>();
         tourists.add(new Tourist(R.drawable.g, "Coral Travel", "Крупный представитель на отечественной туристической индустрии."));
         tourists.add(new Tourist(R.drawable.g, "Coral Travel", "Крупный представитель на отечественной туристической индустрии."));
         tourists.add(new Tourist(R.drawable.ic_launcher_foreground, "Coral Travel", "Крупный представитель на отечественной туристической индустрии."));
@@ -53,9 +53,11 @@ public class MainActivity extends AppCompatActivity {
         tourists.add(new Tourist(R.drawable.ic_launcher_foreground, "Coral Travel", "Крупный представитель на отечественной туристической индустрии."));
 
 
-        adapter = new TouristAdapter(tourists);
+        adapter = new TouristAdapter(this, tourists);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
+
+
 
         if (mAuth.getCurrentUser() != null) {
             Toast.makeText(this, "Необходимо зарегистрироваться", Toast.LENGTH_SHORT).show();
