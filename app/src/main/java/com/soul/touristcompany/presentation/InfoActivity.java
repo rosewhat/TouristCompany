@@ -34,7 +34,7 @@ public class InfoActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-         title = getIntent().getStringExtra("title");
+        title = getIntent().getStringExtra("title");
         String description = intent.getStringExtra("description");
         String street = intent.getStringExtra("street");
         int image = getIntent().getIntExtra("image", 0);
@@ -45,7 +45,6 @@ public class InfoActivity extends AppCompatActivity {
         imageView.setImageResource(image);
 
 
-      //  Toast.makeText(InfoActivity.this, "title" + title, Toast.LENGTH_SHORT).show();
     }
 
     public void sendMessage(View view) {
