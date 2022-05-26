@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,9 +17,10 @@ public class InfoActivity extends AppCompatActivity {
     private TextView textViewTitle;
     private ImageView imageView;
     private TextView textViewDescription;
+    private TextView textViewStreet;
 
 
-
+    private String title;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,15 +28,31 @@ public class InfoActivity extends AppCompatActivity {
 
         textViewDescription = findViewById(R.id.textViewDescriptionInfo);
         textViewTitle = findViewById(R.id.textViewTitleInfo);
+        textViewStreet = findViewById(R.id.textViewStreet);
+
         imageView = findViewById(R.id.imageViewInfo);
 
         Intent intent = getIntent();
-        String title = intent.getStringExtra("title");
-     //   String description = getIntent().getStringExtra("description");
-     //   int image = getIntent().getIntExtra("image", 0);
+
+         title = getIntent().getStringExtra("title");
+        String description = intent.getStringExtra("description");
+        String street = intent.getStringExtra("street");
+        int image = getIntent().getIntExtra("image", 0);
         textViewTitle.setText(title);
-        Toast.makeText(this, "name : " +title , Toast.LENGTH_SHORT).show();
-     //   textViewDescription.setText(description);
-      //  imageView.setImageResource(image);
+        textViewDescription.setText(description);
+        textViewStreet.setText(street);
+        textViewDescription.setText(description);
+        imageView.setImageResource(image);
+
+
+      //  Toast.makeText(InfoActivity.this, "title" + title, Toast.LENGTH_SHORT).show();
+    }
+
+    public void sendMessage(View view) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, title);
+        Intent chose = Intent.createChooser(intent, "Выберите приложение");
+        startActivity(chose);
     }
 }

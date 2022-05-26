@@ -9,6 +9,7 @@
     <ImageView
         android:id="@+id/imageViewInfo"
         android:layout_width="wrap_content"
+
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,16 +22,69 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewInfo" />
 
     <TextView
         android:id="@+id/textViewDescriptionInfo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="TextView"
+        android:textSize="16sp"
+        android:lineSpacingExtra="2dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewTitleInfo" />
+
+    <TextView
+        android:id="@+id/textViewLabelStreet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Описание: "
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintBottom_toBottomOf="@id/textViewStreet"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescriptionInfo" />
+
+    <TextView
+        android:id="@+id/textViewStreet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintBaseline_toBaselineOf="@id/textViewLabelStreet"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLabelStreet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewLabelStreet"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescriptionInfo" />
+
+    <Button
+        android:id="@+id/buttonSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Поделиться"
+        app:cornerRadius="15dp"
+        android:layout_margin="10dp"
+        android:onClick="sendMessage"
+        android:backgroundTint="@android:color/holo_blue_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStreet" />
 </androidx.constraintlayout.widget.ConstraintLayout>

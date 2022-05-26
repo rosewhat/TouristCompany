@@ -52,12 +52,13 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="80dp"
         app:layout_constraintBottom_toTopOf="@+id/editTextEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:adjustViewBounds="true"
         app:layout_constraintTop_toTopOf="parent"
         android:background="@android:color/holo_red_light"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/air" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
